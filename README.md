@@ -1,2 +1,6 @@
 # Voice-Pilot
- A Python voice assistant that opens apps, searches the web, and takes notes — all hands-free
+Voice Pilot is a lightweight, extensible voice assistant built in Python that lets you control your computer hands-free. It listens continuously for spoken commands via your microphone, converts speech to text using Google's speech recognition API, and routes the parsed intent to a modular command handler.
+Out of the box, it supports opening common desktop applications (Chrome, VS Code, Terminal, Calculator, Spotify) with OS-aware launch logic for Windows, macOS, and Linux; performing web searches directly from voice input; announcing the current time; and jotting down quick voice notes that are saved locally with timestamps.
+The architecture separates speech I/O (main.py) from command logic (commands.py), making it straightforward to extend — swap in a wake-word engine like Porcupine for always-on listening, plug in an LLM for smarter natural-language intent parsing, or add new commands (system controls, smart home integration, calendar management, etc.) without touching the core loop.
+Setup is minimal: clone the repo, install dependencies via pip, and run main.py. The README covers platform-specific notes for PyAudio, since microphone access setup varies across operating systems.
+Built as a foundation for experimenting with voice-driven automation and as a practical example of rule-based NLP intent matching in a real, runnable application.
